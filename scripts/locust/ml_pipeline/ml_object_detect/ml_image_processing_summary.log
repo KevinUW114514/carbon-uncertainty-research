@@ -1,0 +1,25 @@
+
+Summary for 1 vCPUs:
+    main_duration_ms: avg=1504.44, min=228, max=4463, stdev=578.36
+        minio_get_ms: avg=7.52, min=4, max=111, stdev=8.88
+        minio_put_ms: avg=0.00, min=0, max=0, stdev=0.00
+
+Summary for 1 vCPUs:
+    main_duration_ms: avg=4.33, min=1.3937737941741943, max=8.591428518295288, stdev=0.79
+        minio_get_ms: avg=0.01, min=0.004896640777587891, max=0.09074020385742188, stdev=0.01
+        minio_put_ms: avg=0.00, min=0.0, max=0.0, stdev=0.00
+
+Summary for 1 vCPUs:
+    main_duration_ms: avg=4.19, min=0.2865438461303711, max=8.591428518295288, stdev=0.69
+        minio_get_ms: avg=0.01, min=0.004512786865234375, max=0.11564421653747559, stdev=0.02
+        minio_put_ms: avg=0.00, min=0.0, max=0.0, stdev=0.00
+
+Summary for 1 vCPUs:
+    main_duration_ms: avg=4.14, min=0.2572300434112549, max=8.591428518295288, stdev=0.66
+        minio_get_ms: avg=0.01, min=0.004512786865234375, max=0.11564421653747559, stdev=0.02
+        minio_put_ms: avg=0.00, min=0.0, max=0.0, stdev=0.00
+
+Summary for 1 vCPUs:
+    main_duration_ms: avg=4.10, min=0.24024462699890137, max=8.591428518295288, stdev=0.64
+        minio_get_ms: avg=0.01, min=0.004512786865234375, max=0.11564421653747559, stdev=0.02
+        minio_put_ms: avg=0.00, min=0.0, max=0.0, stdev=0.00
