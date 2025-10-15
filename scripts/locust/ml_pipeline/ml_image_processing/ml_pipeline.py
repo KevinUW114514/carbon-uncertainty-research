@@ -111,7 +111,7 @@ def process_results(results):
 
 ACTION_NAME = "ml_preprocessing_image"
 
-path = "/home/cc/carbon/benchmarks/containerized/ml/image-processing/images"
+path = "/home/cc/carbon/benchmarks/containerized/ml/source-images/images"
 files_with_sizes = [
     (f, os.path.getsize(os.path.join(path, f)))
     for f in os.listdir(path)
@@ -162,7 +162,12 @@ class ServerlessUser(FastHttpUser):
             timestamps["minio_get_ms"],
             timestamps["minio_put_ms"]
         )
-        results.append((image[0], image[1], main_end_ms - main_start_ms, minio_get_ms, minio_put_ms))
+        
+        cpu_end_time = main_end_ms[0] - main_start_ms[0] + \
+            main_end_ms[1] - main_start_ms[1] + \
+                main_end_ms[2] - main_start_ms[2] + \
+                    main_end_ms[3] - main_start_ms[3] 
+        results.append((image[0], image[1], cpu_end_time, minio_get_ms, minio_put_ms))
 
 
 

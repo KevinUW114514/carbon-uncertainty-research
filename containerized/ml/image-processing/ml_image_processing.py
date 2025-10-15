@@ -70,7 +70,8 @@ def ping(args=dict()):
         "minio_get_ms": 0,
         "minio_put_ms": 0,
     }
-    timestamps["main_start_ms"] = get_timestamp_ms()
+    # timestamps["main_start_ms"] = get_timestamp_ms()
+    timestamps["main_start_ms"] = os.times()
     access_key = "ROOTNAME"
     secret_key = "CHANGEME123"
     bucket_name = "images"
@@ -115,7 +116,8 @@ def ping(args=dict()):
     # -----------------------------------------------------------------------
     # Return results
     # -----------------------------------------------------------------------
-    timestamps["main_end_ms"] = get_timestamp_ms()
+    # timestamps["main_end_ms"] = get_timestamp_ms()
+    timestamps["main_end_ms"] = os.times()
     result["timestamps"] = timestamps
     return result
 
