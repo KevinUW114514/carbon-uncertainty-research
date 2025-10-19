@@ -72,8 +72,8 @@ def ping(args=dict()):
     }
     # timestamps["main_start_ms"] = get_timestamp_ms()
     timestamps["main_start_ms"] = os.times()
-    access_key = "ROOTNAME"
-    secret_key = "CHANGEME123"
+    access_key = "minioadmin"
+    secret_key = "minioadmin"
     bucket_name = "images"
     if minio_client is None:
         minio_client = Minio(

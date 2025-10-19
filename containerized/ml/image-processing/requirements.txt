@@ -6,3 +6,6 @@ scipy
 Pillow
 cloudant
 minio
+gunicorn
+pandas
+matplotlib

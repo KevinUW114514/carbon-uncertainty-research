@@ -111,7 +111,7 @@ def process_results(results):
 
 ACTION_NAME = "ml_preprocessing_image"
 
-path = "/home/cc/carbon/benchmarks/containerized/ml/source-images/images"
+path = "/home/cc/carbon/carbon-uncertainty-research/containerized/ml/source-images/images"
 files_with_sizes = [
     (f, os.path.getsize(os.path.join(path, f)))
     for f in os.listdir(path)

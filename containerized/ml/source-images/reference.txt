@@ -1,0 +1,2 @@
+https://huggingface.co/datasets/poloclub/diffusiondb
+https://huggingface.co/datasets/poloclub/diffusiondb/blob/main/images/part-000001.zip

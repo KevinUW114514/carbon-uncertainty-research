@@ -1,6 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import socket
+
+SUFFIX = "_amd.png" if socket.gethostname().endswith("amd") else "_intel.png"
 
 # Read the CSV file
 df = pd.read_csv("ml_image_processing_results_1_cores.csv")  # change to your actual file name
@@ -25,4 +28,4 @@ plt.legend()
 plt.grid(True)
 
 # Show the plot
-plt.savefig("ml_image_processing_scatter_plot.png")
+plt.savefig("ml_image_processing_scatter_plot" + SUFFIX)
