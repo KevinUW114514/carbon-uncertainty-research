@@ -51,7 +51,7 @@ def minio_put_image(minio_client, bucket_name, image_name, image, timestamps):
 
 
 if os.path.exists("/.dockerenv"):
-    endpoint = "minio:9000"      # inside container (use Docker network alias)
+    endpoint = "10.52.2.162:9000"      # inside container (use Docker network alias)
 else:
     endpoint = "localhost:9000"
 
@@ -70,10 +70,10 @@ def ping(args=dict()):
         "minio_get_ms": 0,
         "minio_put_ms": 0,
     }
-    # timestamps["main_start_ms"] = get_timestamp_ms()
-    timestamps["main_start_ms"] = os.times()
-    access_key = "minioadmin"
-    secret_key = "minioadmin"
+    timestamps["main_start_ms"] = get_timestamp_ms()
+    # timestamps["main_start_ms"] = os.times()
+    access_key = "ROOTNAME"
+    secret_key = "CHANGEME123"
     bucket_name = "images"
     if minio_client is None:
         minio_client = Minio(
@@ -116,8 +116,8 @@ def ping(args=dict()):
     # -----------------------------------------------------------------------
     # Return results
     # -----------------------------------------------------------------------
-    # timestamps["main_end_ms"] = get_timestamp_ms()
-    timestamps["main_end_ms"] = os.times()
+    timestamps["main_end_ms"] = get_timestamp_ms()
+    # timestamps["main_end_ms"] = os.times()
     result["timestamps"] = timestamps
     return result
 

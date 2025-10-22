@@ -1,7 +1,7 @@
 # ------------------------------------------------------
 # Stage 1: Base image
 # ------------------------------------------------------
-FROM python:3.11-slim
+FROM python:3.10-slim
 
 # Set environment vars for Python
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -30,4 +30,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8123
 
 # Default command to run the Flask app
-CMD ["python", "app.py"]
+CMD ["gunicorn", "app:app", "-b", ":8123"]
